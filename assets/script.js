@@ -21,7 +21,7 @@ $(function () {
       console.log(hourCard);
       // toggles the classes past, present, or future depending on the current hour vs the hour card id
       $(this).toggleClass("past", hourCard < currentHour);
-      $(this).toggleClass("present", hourCard === currentHour);
+      $(this).toggleClass("present", hourCard == currentHour);
       $(this).toggleClass("future", hourCard > currentHour);
     });
   }
