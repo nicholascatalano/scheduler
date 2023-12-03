@@ -31,8 +31,8 @@ $(function () {
   function applyColors() {
     // targeting each time-block object
     $(".time-block").each(function () {
-      // referenced mdn article on parseInt in order to parse just the hour number
-      var hourCard = parseInt(this.id);
+      // variable to parse just the number in the id of the current object, but then removing the hyphen before doing so, then targeting the 1 index in the produced array
+      var hourCard = parseInt(this.id.split("-")[1]);
       console.log(hourCard);
       // toggles the classes past, present, or future depending on the current hour vs the hour card id
       $(this).toggleClass("past", hourCard < currentHour);
